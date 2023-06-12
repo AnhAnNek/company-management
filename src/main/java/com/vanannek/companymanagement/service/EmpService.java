@@ -2,10 +2,10 @@ package com.vanannek.companymanagement.service;
 
 import com.vanannek.companymanagement.dto.EmployeeDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,12 +15,30 @@ public class EmpService extends BaseApiService {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Value("${api.base-url}")
-    private String baseUrl;
+    @Override
+    protected String getBaseUrl() {
+        return super.getBaseUrl() + "/employee";
+    }
+
+    public void addEmp(EmployeeDto emp) {
+        String apiUrl = getBaseUrl() + "/add";
+        post(apiUrl, emp, Void.class);
+    }
+
+    public void deleteEmp(Long id) {
+        String apiUrl = getBaseUrl() + "/delete/" + id;
+        delete(apiUrl);
+    }
+
+    public void updateEmp(Long id, EmployeeDto emp) {
+        String apiUrl = getBaseUrl() + "/update/" + id;
+        put(apiUrl, emp, Void.class);
+    }
 
     public List<EmployeeDto> getAll() {
-        String apiUrl = baseUrl + "/employee";
-        EmployeeDto[] employees = get(apiUrl, EmployeeDto[].class);
-        return Arrays.asList(employees);
+        EmployeeDto[] emps = get(getBaseUrl(), EmployeeDto[].class);
+        if (emps != null)
+            return Arrays.asList(emps);
+        return new ArrayList<>();
     }
 }

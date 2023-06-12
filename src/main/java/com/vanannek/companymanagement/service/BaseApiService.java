@@ -13,7 +13,11 @@ public abstract class BaseApiService {
     protected RestTemplate restTemplate;
 
     @Value("${api.base-url}")
-    protected String baseUrl;
+    private String baseUrl;
+
+    protected String getBaseUrl() {
+        return baseUrl;
+    }
 
     protected <T> T get(String url, Class<T> responseType) {
         try {
@@ -25,7 +29,7 @@ public abstract class BaseApiService {
         }
     }
 
-    protected <T> T pose(String url, Object request, Class<T> responseType) {
+    protected <T> T post(String url, Object request, Class<T> responseType) {
         try {
             ResponseEntity<T> response = restTemplate.postForEntity(url, request, responseType);
             return response.getBody();
