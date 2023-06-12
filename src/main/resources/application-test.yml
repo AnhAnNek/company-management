@@ -1,0 +1,5 @@
+server:
+  port: 8005
+
+api:
+  base-url: https://localhost:8000/api
