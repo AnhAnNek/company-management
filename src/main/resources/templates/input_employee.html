@@ -44,12 +44,13 @@
                             <input type="text" class="form-control" name="name" th:value="${emp.name}">
                         </div>
                         <div class="form-group">
-                            <label>Gender</label>
+                            <label>Select Gender</label>
                             <select class="form-control" name="gender">
                                 <option value="">Select gender</option>
                                 <option value="male" th:selected="${emp.gender == 'MALE'}">Male</option>
                                 <option value="female" th:selected="${emp.gender == 'FEMALE'}">Female</option>
                                 <option value="other" th:selected="${emp.gender == 'OTHER'}">Other</option>
+                                <option th:each="role : ${roles}" th:value="${role}" th:text="${role}" th:selected="${role == emp.roleId}"></option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -73,12 +74,28 @@
                             <input type="text" class="form-control" name="address" th:value="${emp.address}">
                         </div>
                         <div class="form-group">
-                            <label>Enter Department Id</label>
-                            <input type="text" class="form-control" name="depId" th:value="${emp.depId}">
+                            <label>Select Department</label>
+                            <select class="form-control" name="deptId" th:value="${emp.deptId}">
+                                <option value="">Select department</option>
+                                <option th:each="dept : ${depts}" th:value="${dept.id}" th:text="${dept.name}"
+                                        th:selected="${dept.id == emp.deptId}"></option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label>Enter Role Id</label>
-                            <input type="text" class="form-control" name="roleId" th:value="${emp.roleId}">
+                            <label>Select Role</label>
+                            <select class="form-control" name="roleId" th:value="${emp.roleId}">
+                                <option value="">Select role</option>
+                                <option th:each="role : ${roles}" th:value="${role.id}" th:text="${role.name}"
+                                        th:selected="${role.id == emp.roleId}"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Username</label>
+                            <input type="text" class="form-control" name="username" th:value="${acc.username}">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Enter Password</label>
+                            <input type="password" class="form-control" id="password" name="password" th:value="${acc.password}">
                         </div>
 
                         <button class="btn btn-primary btn-block">Submit</button>

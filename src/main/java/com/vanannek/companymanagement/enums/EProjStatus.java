@@ -1,6 +1,5 @@
-package com.vanannek.companycrud.enums;
+package com.vanannek.companymanagement.enums;
 
-import lombok.Data;
 import lombok.Getter;
 
 public enum EProjStatus {

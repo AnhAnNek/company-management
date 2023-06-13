@@ -1,9 +1,7 @@
 package com.vanannek.companymanagement.service;
 
 import com.vanannek.companymanagement.dto.EmployeeDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,9 +9,6 @@ import java.util.List;
 
 @Service
 public class EmpService extends BaseApiService {
-
-    @Autowired
-    private RestTemplate restTemplate;
 
     @Override
     protected String getBaseUrl() {
@@ -30,8 +25,8 @@ public class EmpService extends BaseApiService {
         delete(apiUrl);
     }
 
-    public void updateEmp(Long id, EmployeeDto emp) {
-        String apiUrl = getBaseUrl() + "/update/" + id;
+    public void updateEmp(EmployeeDto emp) {
+        String apiUrl = getBaseUrl() + "/update/" + emp.getId();
         put(apiUrl, emp, Void.class);
     }
 
@@ -44,7 +39,6 @@ public class EmpService extends BaseApiService {
 
     public EmployeeDto findById(Long id) {
         String apiUrl = getBaseUrl() + "/get?id=" + id;
-        EmployeeDto emp = get(apiUrl, EmployeeDto.class);
-        return emp;
+        return get(apiUrl, EmployeeDto.class);
     }
 }
