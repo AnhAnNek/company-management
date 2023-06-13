@@ -10,7 +10,7 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
 
-    <title>Title</title>
+    <title>Edit Employee</title>
 </head>
 <body>
 
@@ -34,41 +34,54 @@
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="text-center text-primary">Edit Emp</h4>
+                    <h4 class="text-center text-primary">Edit</h4>
 
-                    <form th:action="@{/update}" method="post" th:object="${emp}">
-
+                    <form th:action="@{/employee/update}" method="post" th:object="${emp}">
                         <input type="hidden" th:value="${emp.id}" name="id">
 
                         <div class="form-group">
                             <label>Enter Full Name</label>
                             <input type="text" class="form-control" name="name" th:value="${emp.name}">
                         </div>
-
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <select class="form-control" name="gender">
+                                <option value="">Select gender</option>
+                                <option value="male" th:selected="${emp.gender == 'MALE'}">Male</option>
+                                <option value="female" th:selected="${emp.gender == 'FEMALE'}">Female</option>
+                                <option value="other" th:selected="${emp.gender == 'OTHER'}">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Birthday</label>
+                            <input type="text" class="form-control" name="birthday" th:value="${#dates.format(emp.birthday, 'yyyy-MM-dd')}" maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Identify Card</label>
+                            <input type="text" class="form-control" name="identifyCard" th:value="${emp.identifyCard}">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Email</label>
+                            <input type="text" class="form-control" name="email" th:value="${emp.email}">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Phone No</label>
+                            <input type="number" class="form-control" name="phoneNumber" th:value="${emp.phoneNumber}">
+                        </div>
                         <div class="form-group">
                             <label>Enter Address</label>
                             <input type="text" class="form-control" name="address" th:value="${emp.address}">
                         </div>
-
                         <div class="form-group">
-                            <label>Enter Email</label>
-                            <input type="email" class="form-control" name="email" th:value="${emp.email}">
+                            <label>Enter Department Id</label>
+                            <input type="text" class="form-control" name="depId" th:value="${emp.depId}">
                         </div>
-
-
                         <div class="form-group">
-                            <label>Enter Phone No</label>
-                            <input type="number" class="form-control" name="phno" th:value="${emp.phno}">
-                        </div>
-
-
-                        <div class="form-group">
-                            <label>Enter Salary</label> <input type="number"
-                                                               class="form-control" name="salary" th:value="${emp.salary}">
+                            <label>Enter Role Id</label>
+                            <input type="text" class="form-control" name="roleId" th:value="${emp.roleId}">
                         </div>
 
                         <button class="btn btn-primary btn-block">Submit</button>
-
                     </form>
                 </div>
             </div>

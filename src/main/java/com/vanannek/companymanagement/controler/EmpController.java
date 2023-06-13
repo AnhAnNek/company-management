@@ -39,14 +39,14 @@ public class EmpController {
     public String edit(@PathVariable("id") Long id, Model m) {
         EmployeeDto emp = empService.findById(id);
         m.addAttribute("emp", emp);
-        return "redirect:/";
+        return "input_employee";
     }
 
     @PostMapping("/update")
     public String update(@ModelAttribute EmployeeDto e, HttpSession session) {
         empService.addEmp(e);
         session.setAttribute("msg", "Employee Update Successfully...");
-        return "redirect:/";
+        return "redirect:/employee";
     }
 
     @GetMapping("/get-all")
