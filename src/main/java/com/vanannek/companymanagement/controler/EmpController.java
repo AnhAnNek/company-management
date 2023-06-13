@@ -6,13 +6,9 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Objects;
 
 @Controller
 @RequestMapping("/employee")
@@ -21,23 +17,35 @@ public class EmpController {
     @Autowired
     private EmpService empService;
 
-    @GetMapping("/edit-view")
+    @GetMapping("/input-employee")
     public String getEditView() {
-        return "";
+        return "input_employee";
     }
 
     @PostMapping("/add-new")
     public String add(@ModelAttribute EmployeeDto e, HttpSession session) {
         empService.addEmp(e);
-        session.setAttribute("msg", "Emplyoee Added Sucessfully..");
+        session.setAttribute("msg", "Employee Added Successfully..");
         return "redirect:/";
     }
 
-    public String delete() {
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id") Long id) {
+        empService.deleteEmp(id);
+        return "redirect:/employee/get-all";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String edit(@PathVariable("id") Long id, Model m) {
+        EmployeeDto emp = empService.findById(id);
+        m.addAttribute("emp", emp);
         return "redirect:/";
     }
 
-    public String update() {
+    @PostMapping("/update")
+    public String update(@ModelAttribute EmployeeDto e, HttpSession session) {
+        empService.addEmp(e);
+        session.setAttribute("msg", "Employee Update Successfully...");
         return "redirect:/";
     }
 

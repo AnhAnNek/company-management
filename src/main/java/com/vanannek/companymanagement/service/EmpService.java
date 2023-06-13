@@ -41,4 +41,10 @@ public class EmpService extends BaseApiService {
             return Arrays.asList(emps);
         return new ArrayList<>();
     }
+
+    public EmployeeDto findById(Long id) {
+        String apiUrl = getBaseUrl() + "/get?id=" + id;
+        EmployeeDto emp = get(apiUrl, EmployeeDto.class);
+        return emp;
+    }
 }
