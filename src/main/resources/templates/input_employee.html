@@ -54,8 +54,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Enter Birthday</label>
-                            <input type="text" class="form-control" name="birthday" th:value="${#dates.format(emp.birthday, 'yyyy-MM-dd')}" maxlength="10">
+                            <label>Birthdate Picker</label>
+                            <input type="date" class="form-control" name="birthday" th:value="emp.birthday">
                         </div>
                         <div class="form-group">
                             <label>Enter Identify Card</label>
