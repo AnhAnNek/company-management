@@ -1,10 +1,9 @@
 version: '3'
 services:
-  company-management:
-    image:
-      company-management-app
+  company-management-app:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '8080:8080'
+      - '8001:8080'
+
