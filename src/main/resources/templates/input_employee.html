@@ -47,15 +47,12 @@
                             <label>Select Gender</label>
                             <select class="form-control" name="gender">
                                 <option value="">Select gender</option>
-                                <option value="male" th:selected="${emp.gender == 'MALE'}">Male</option>
-                                <option value="female" th:selected="${emp.gender == 'FEMALE'}">Female</option>
-                                <option value="other" th:selected="${emp.gender == 'OTHER'}">Other</option>
-                                <option th:each="role : ${roles}" th:value="${role}" th:text="${role}" th:selected="${role == emp.roleId}"></option>
+                                <option th:each="gender : ${genders}" th:value="${gender.toString()}" th:text="${gender}" th:selected="${gender == emp.gender}"></option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Birthdate Picker</label>
-                            <input type="date" class="form-control" name="birthday" th:value="emp.birthday">
+                            <input type="date" class="form-control" name="birthday" th:value="${emp.birthday}">
                         </div>
                         <div class="form-group">
                             <label>Enter Identify Card</label>
@@ -85,7 +82,7 @@
                             <label>Select Role</label>
                             <select class="form-control" name="roleId" th:value="${emp.roleId}">
                                 <option value="">Select role</option>
-                                <option th:each="role : ${roles}" th:value="${role.id}" th:text="${role.name}"
+                                <option th:each="role : ${roles}" th:value="${role.id}" th:text="${role.title}"
                                         th:selected="${role.id == emp.roleId}"></option>
                             </select>
                         </div>
@@ -94,8 +91,8 @@
                             <input type="text" class="form-control" name="username" th:value="${acc.username}">
                         </div>
                         <div class="form-group">
-                            <label for="password">Enter Password</label>
-                            <input type="password" class="form-control" id="password" name="password" th:value="${acc.password}">
+                            <label for="pass">Enter Password</label>
+                            <input type="password" class="form-control" id="pass" name="pass" th:value="${acc.pass}">
                         </div>
 
                         <button class="btn btn-primary btn-block">Submit</button>

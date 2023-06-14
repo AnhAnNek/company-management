@@ -1,13 +1,16 @@
 package com.vanannek.companymanagement.dto;
 
-import io.swagger.annotations.ApiParam;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class EmployeeDto {
     private Long id;
 
@@ -25,7 +28,6 @@ public class EmployeeDto {
 
     private String address = "";
 
-    @ApiParam("depId")
     private Long deptId;
 
     private Integer roleId;
