@@ -1,11 +1,20 @@
-# Use a base image with Java 17 and necessary dependencies
-FROM openjdk:17
+# Stage 1: Build the application
+FROM maven:3.8.3-openjdk-17 AS build
+WORKDIR /company-management
+COPY pom.xml .
 
-# Set the working directory inside the container
-WORKDIR /app
+# Download dependencies and cache them
+RUN mvn dependency:go-offline -B
 
-# Copy the JAR file and any other necessary files to the container
-COPY target/*.jar company-management.jar
+COPY src ./src
+RUN mvn package -DskipTests
 
-# Set the entrypoint command to run your application
-ENTRYPOINT ["java", "-jar", "company-management.jar"]
+# Stage 2: Set up the runtime environment
+FROM openjdk:17-jdk-slim AS runtime
+WORKDIR /company-management
+
+# Copy the built JAR file from the previous stage
+COPY --from=build /company-management/target/company-management.jar .
+
+# Specify the command to run the application
+CMD ["java", "-jar", "company-management.jar"]
