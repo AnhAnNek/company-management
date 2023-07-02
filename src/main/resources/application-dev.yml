@@ -1,2 +1,2 @@
 api:
-  base-url: https://company-crud-production.up.railway.app/api
+  base-url: http://localhost:8000/api
