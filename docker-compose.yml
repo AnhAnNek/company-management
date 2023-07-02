@@ -1,9 +1,0 @@
-version: '3'
-services:
-  company-management-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - '8001:8080'
-
