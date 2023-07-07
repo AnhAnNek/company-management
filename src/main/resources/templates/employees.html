@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/project.css">
+    <link rel="stylesheet" href="./assets/css/employee.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <title>Projects</title>
+    <title>Employee</title>
   </head>
   <body>
     <div class="app">
@@ -74,118 +74,7 @@
       </header>
        
       <div class="container">
-        <div class="projects">
-          <div class="proj_doing">
-          <div class="header__list">
-            <div class="title__list">
-              <i style="color: #0978b9;" class="fa-solid fa-person-running"></i>
-              <h4 style="margin-top: 18px; margin-right: 5px; color: #0978b9;">Doing</h2>
-              <div class="dropdown" style="margin-top: 18px;">
-                <button class="btn dropdown-toggle" style="background-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                </button>
-              </div>
-            </div>     
-            <div class="box__item-header">
-              <div class="input-group mb-3">
-                <button class="btn btn__icon">  
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <input class="input__find" type="text"></input>
-              </div>   
-            </div>        
-          </div>
-          <ul class="list__card" style="background-image: linear-gradient(0,#e9eef1,#bceaf5)">
-            <li class="card-item">
-              <div class="card" style="width: 18rem;">
-                <img src="https://cdn0.iconfinder.com/data/icons/web-development-52/256/66-512.png" class="card-img-top" alt="Task Img">
-                <div class="card-body">
-                  <h5 class="card-title">Project 1</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <div style="display: flex;">
-                    <a href="#" class="btn btn-select-item">Select</a>
-                  </div>            
-                </div>
-              </div>
-            </li>
-            <li class="card-item" onclick="openModalProj()" >
-              <div class="card card__new" style="width: 18rem;" >
-                  <button class="btn btn__icon btn__add-project">  
-                      <i class="fa-solid fa-plus"></i>
-                  </button>
-              </div>
-            </li>
-          </ul>     
-          </div>
-          <div class="proj_overdue">
-            <div class="header__list">
-              <div class="title__list">
-                <i style="color: #f10372;" class="fa-solid fa-circle-xmark"></i>
-                <h4 style="margin-top: 18px; margin-right: 5px; color: #f10372;">Overdue</h2>
-                <div class="dropdown" style="margin-top: 18px;">
-                  <button class="btn dropdown-toggle" style="background-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  </button>
-                </div>
-              </div>     
-              <div class="box__item-header">
-                <div class="input-group mb-3">
-                  <button class="btn btn__icon">  
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                  <input class="input__find" type="text"></input>
-                </div>   
-              </div>        
-            </div>
-            <ul class="list__card" style="background-image: linear-gradient(0,#faeff4,#f8e2ec)">
-              <li class="card-item">
-                <div class="card" style="width: 18rem;">
-                  <img src="https://cdn0.iconfinder.com/data/icons/web-development-52/256/66-512.png" class="card-img-top" alt="Task Img">
-                  <div class="card-body">
-                    <h5 class="card-title">Project 3</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div style="display: flex;">
-                      <a href="#" class="btn btn-select-item">Select</a>
-                    </div>            
-                  </div>
-                </div>
-              </li>
-              
-            </ul>     
-          </div>      
-          <div class="proj_complete">
-            <div class="header__list">
-              <div class="title__list">
-                <i style="color: #0e760e;" class="fa-solid fa-chevron-down"></i>
-                <h4 style="margin-top: 18px; margin-right: 5px; color: #0e760e;">Completed</h2>
-                <div class="dropdown" style="margin-top: 18px;">
-                  <button class="btn dropdown-toggle" style="background-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  </button>
-                </div>
-              </div>     
-              <div class="box__item-header">
-                <div class="input-group mb-3">
-                  <button class="btn btn__icon">  
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                  <input class="input__find" type="text"></input>
-                </div>   
-              </div>        
-            </div>
-            <ul class="list__card" style="background-image: linear-gradient(0,#eaf1e9,#dff7df)">
-              <li class="card-item">
-                <div class="card" style="width: 18rem;">
-                  <img src="https://cdn0.iconfinder.com/data/icons/web-development-52/256/66-512.png" class="card-img-top" alt="Task Img">
-                  <div class="card-body">
-                    <h5 class="card-title">Project 2</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div style="display: flex;">
-                      <a href="#" class="btn btn-select-item">Select</a>
-                    </div>            
-                  </div>
-                </div>
-              </li>  
-            </ul>     
-          </div>       
-        </div>
+        
       </div>
         
         
