@@ -1,0 +1,36 @@
+.projects  , .UserTasks{
+    left: 0;
+    margin-left: 10px; 
+    display: flex;
+    position: absolute; 
+    margin-top: var(--header-height);
+    height: 1200px;
+    background-color: antiquewhite;
+}
+
+.proj_overdue {
+    margin-top: 400px;
+    position: absolute;
+}
+
+.proj_doing {
+    position: absolute;
+}
+
+.proj_complete {
+    margin-top: 800px;
+}
+
+.btn__add-project {
+    margin: auto;
+    height: 60px;
+    width: 60px;
+}
+
+.form__input-new-proj {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+}

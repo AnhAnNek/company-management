@@ -1,0 +1,14 @@
+.departments {
+    position: absolute;
+    display: inline-block;
+}
+
+.container {
+    left: 0;
+    margin-left: 10px; 
+    display: flex;
+    position: absolute; 
+    margin-top: var(--header-height);
+    height: 1200px;
+}
+
