@@ -74,8 +74,114 @@
       </header>
        
       <div class="container">
-        <div class="departments">
-        </div>
+        <div class="human_resources">
+          <div class="department__container">    
+            <ul class="departments__list">
+              <li class="department__item">      
+                  <div class="card-department__item">
+                    <img class="img__department" src="https://www.shopivo.com/blog/wp-content/uploads/2019/10/Featured-Image-Team-Building.png" alt="team">
+                    <h3>Team 1</h3>
+                  </div>
+              </li>
+              <li class="department__item">      
+                <div class="card-department__item">
+                  <img class="img__department" src="https://www.shopivo.com/blog/wp-content/uploads/2019/10/Featured-Image-Team-Building.png" alt="team">
+                  <h3>Team 1</h3>
+                </div>
+              </li>
+              <li class="department__item">      
+                <div class="card-department__item">
+                  <img class="img__department" src="https://www.shopivo.com/blog/wp-content/uploads/2019/10/Featured-Image-Team-Building.png" alt="team">
+                  <h3>Team 1</h3>
+                </div>
+              </li>
+              <li class="department__item">      
+                <div class="card-department__item">
+                  <img class="img__department" src="https://www.shopivo.com/blog/wp-content/uploads/2019/10/Featured-Image-Team-Building.png" alt="team">
+                  <h3>Team 1</h3>
+                </div>
+              </li>
+              <li class="department__item">      
+                <div class="card-department__item">
+                  <img class="img__department" src="https://www.shopivo.com/blog/wp-content/uploads/2019/10/Featured-Image-Team-Building.png" alt="team">
+                  <h3>Team 1</h3>
+                </div>
+              </li>
+              <li class="department__item">      
+                <div class="card-department__item">
+                  <img class="img__department" src="https://www.shopivo.com/blog/wp-content/uploads/2019/10/Featured-Image-Team-Building.png" alt="team">
+                  <h3>Team 1</h3>
+                </div>
+              </li>
+              <li class="department__item">      
+                <div class="card-department__item">
+                  <img class="img__department" src="https://www.shopivo.com/blog/wp-content/uploads/2019/10/Featured-Image-Team-Building.png" alt="team">
+                  <h3>Team 1</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="employees__container">
+            <div class="employees__header">
+              <i class="fa-solid fa-people-group employeea__icon"></i>
+              <h3>Employees</h3>
+              <div class="input-group mb-3 box_find-item">
+                <button class="btn btn__icon">  
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input class="input__find" type="text"></input>     
+                <button class="btn__new-employee">
+                  <img src="https://tmi.butte.edu/wp-content/uploads/2018/09/add-person-2646097_1280.png" alt="new employee">
+                  <h5>New</h5>
+                </button>
+              </div> 
+              
+            </div>
+            <div class="separare">   
+            </div>
+            <table class="table border table-striped table__employees">
+              <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Birthday</th>
+                    <th>Identify Card</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Department ID</th>
+                    <th>Role ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="employee : ${employees}">
+                    <td th:text="${employee.id}"></td>
+                    <td th:text="${employee.name}"></td>
+                    <td th:text="${employee.gender}"></td>
+                    <td th:text="${#dates.format(employee.birthday, 'dd-MM-yyyy')}"></td>
+                    <td th:text="${employee.identifyCard}"></td>
+                    <td th:text="${employee.email}"></td>
+                    <td th:text="${employee.phoneNumber}"></td>
+                    <td th:text="${employee.address}"></td>
+                    <td th:text="${employee.depId}"></td>
+                    <td th:text="${employee.roleId}"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="department__header">
+            <i class="fa-solid fa-house-user icon__department"></i>
+            <h2>Departments</h2>
+            <div class="dropdown" style="margin-top: 1.8rem; margin-left: 5px;">
+              <button class="btn dropdown-toggle" style="background-color: transparent; color: white;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              </button>
+            </div>
+            <button class="btn__new-dept">
+              <i class="fa-solid fa-plus icon__department"></i>
+            </button>
+          </div>
+        </div>     
       </div>
         
         
@@ -140,18 +246,6 @@
            </div>
          </div>
         </div>   
-      </div>
-    </div>
-    <div id="modalProj" class="modal">
-      <div class="modal__overlay" onclick="closeModalProj()">
-      </div>
-      <div class="modal__body modal__body-newproj">
-        <span class="close close__modal" onclick="closeModal()">&times;</span>
-        <div class="modal__inner">         
-            <div class="form__input-new-proj border">
-
-            </div>
-        </div>
       </div>
     </div>
     <script>
