@@ -69,13 +69,13 @@ h3 {
 }
 
 .icon__department {
-  font-size: 25px;
+  font-size: 20px;
   margin: auto;
   margin-left: 10px;
   color: white;
 }
 
-h2 {
+.department__header h3 {
     margin: auto;
     font-weight: 600;
     color: white;
