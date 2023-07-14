@@ -84,8 +84,7 @@
             </ul>
           </nav>
         </div>     
-      </header>
-       
+      </header>    
       <div class="container">
         <div class="human_resources">
           <div class="department__container">    
@@ -176,7 +175,7 @@
                     <button id="btn-edit" type="button" class="btn btn__op">
                       <i class="fa-solid fa-pencil"></i>
                     </button>
-                    <button id="btn-delete" type="button" class="btn btn__op">
+                    <button id="btn-delete" onclick="openModalDelete()" type="button" class="btn btn__op">
                       <i class="fa-solid fa-trash"></i>
                     </button>                   
                   </div>
@@ -204,7 +203,7 @@
                   <button id="btn-edit" type="button" class="btn btn__op">
                     <i class="fa-solid fa-pencil"></i>
                   </button>
-                  <button id="btn-delete" type="button" class="btn btn__op">
+                  <button id="btn-delete" onclick="openModalDelete()" type="button" class="btn btn__op">
                     <i class="fa-solid fa-trash"></i>
                   </button>                   
                 </div>
@@ -232,7 +231,7 @@
                   <button id="btn-edit" type="button" class="btn btn__op">
                     <i class="fa-solid fa-pencil"></i>
                   </button>
-                  <button id="btn-delete" type="button" class="btn btn__op">
+                  <button id="btn-delete" onclick="openModalDelete()" type="button" class="btn btn__op">
                     <i class="fa-solid fa-trash"></i>
                   </button>                   
                 </div>
@@ -251,9 +250,7 @@
             </button>
           </div>
         </div>     
-      </div>
-        
-        
+      </div> 
     </div>
     <div id="modalUser" class="modal">
       <div class="modal__overlay " onclick="closeModalUser()">
@@ -317,11 +314,24 @@
         </div>   
       </div>
     </div>
+    <div id="modalDelete" class="modal">
+      <div class="modal__overlay" onclick="closeModalDelete()">
+      </div>
+      <div class="modal__body modal__body-delete-employee">
+        <span class="close close__modal" onclick="closeModalDelete()">&times;</span>
+        <div class="modal__inner">         
+            <div class="form__input-new-proj">
+
+            </div>
+        </div>
+      </div>
+    </div>
     <script>
       function goto() {
         history.pushState({}, "", "index.html");
         }
     </script>
+    <script src="./assets/javascript/department.js"></script>
     <script src="./assets/javascript/modal.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

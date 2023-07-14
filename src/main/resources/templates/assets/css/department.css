@@ -280,3 +280,8 @@ h3 {
 #btn-edit i {
     color: rgb(32, 152, 78);
 }
+
+.modal__body-delete-employee {
+    height: 50rem;
+    width: 50rem;
+}
