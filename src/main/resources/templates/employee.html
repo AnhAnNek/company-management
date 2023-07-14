@@ -16,65 +16,122 @@
   </head>
   <body>
     <div class="app">
-      <header class="header">
+      <header class="employee__header">
         <div class="grid">
           <nav class="header__navbar">
             <ul class="header__navbar-list">
                 <li class="header__navbar-item--strong header__navbar-item">
-                  <div class="header__navbar-icon">
-                    <i class="fa-solid fa-building"></i>
-                  </div>      
-                  Company Management                              
+                  <div class="btn__back btn">
+                    <a href="departments.html">
+                      <i class="icon__back fa-solid fa-arrow-left fa-beat-fade"></i>
+                    </a>
+                  </div>                           
                 </li>
             </ul>
             <ul class="header__navbar-list"> 
               <li id="home-select-item" class="header__navbar-item">
                 <div class="header__navbar-icon">
-                  <i class="icon__header-menu fa-solid fa-home"></i>
+                  <i class="icon__header-menu fa-sharp fa-solid fa-pen"></i>
                 </div> 
-                <a href="main.html">Home</a>                   
+                <a href="#">Chỉnh sửa</a>                   
               </li>      
-              <li id="projects-select-item" class="header__navbar-item">
-                <div class="header__navbar-icon">
-                  <i class="icon__header-menu fa-solid fa-briefcase"></i>
-                </div> 
-                <a href="projects.html">Dự án</a>                   
-              </li>    
-              <li class="header__navbar-item"> 
-                <div class="header__navbar-icon">
-                  <i class="icon__header-menu fa-solid fa-users"></i>
-                </div> 
-                <a href="departments.html">Nhân sự</a>                   
-              </li>                                 
-              <li class="header__navbar-item">
-                <div class="header__navbar-icon">
-                  <i class="icon__header-menu fa-solid fa-pen-to-square"></i>
-                </div>  
-                <a href="">Điểm danh</a>                   
-              </li>
               <li class="header__navbar-item header__navbar-item--separate">
                 <div class="header__navbar-icon">
+
                   <i class="icon__header-menu fa-solid fa-chart-simple"></i>
                 </div>  
                 <a href="">Thống kê</a>                   
               </li>
-              <li class="header__navbar-item header__navbar-item--separate"> 
-                <div class="header__navbar-icon">
-                  <i class="fa-solid fa-bell"></i>
+              <li class="header__navbar-item header__navbar-item-notify"> 
+                <div class="header__navbar-icon ">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="header__notify">
+                  <header class="header__notify-header">
+                    <h4>Yêu cầu mới</h4>
+                  </header>
+                  <ul class="notify__list">
+                    <li class="notify__iteam">
+                      <span>None</span>
+                    </li>
+                  </ul>
+                  <div class="notify__footer">
+                    <a href="" class="btn">Xem tất cả</a>
+                  </div>
                 </div>                   
-              </li>
-              <li style="margin-right: -30px;" class="header__navbar-item">                   
-                  <button class="btn__img" onclick="openModalUser()">
-                    <img src="https://m.media-amazon.com/images/M/MV5BYWJmZmE1YWItYjBjYi00ODU4LTg2MDUtOTQyNWY2NjFlOGM5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_.jpg" class="card-img-top" alt="avartar">
-                  </button>
               </li>
             </ul>
           </nav>
         </div>     
       </header>
-       
       <div class="container">
-        
+       
+        <div class="emloyee__container">
+          <div class="info_employee">
+            <div class="card card__info">
+              <img src="https://cdn4.iconfinder.com/data/icons/avatars-171/400/Avatar_10-512.png" class=" card-img-top" alt="avartar">
+              <div class="card-body">
+                <h3 class="card-title">Nguyễn Văn Name</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <h5>ID:</h5>
+                      <p  class="card-text">2110111</p>
+                    </div>
+                    <div class="col">
+                      <h5>CCCD:</h5>
+                      <p  class="card-text">08212535562</p>
+                    </div>
+                    <div class="col">
+                      <h5>SĐT:</h5>
+                      <p  class="card-text">032641524</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Giới tính:</h5>
+                      <p  class="card-text">Nam</p>
+                    </div>
+                    <div class="col">
+                      <h5>Ngày sinh:</h5>
+                      <p  class="card-text">28/12/2003</p>
+                    </div>
+                    <div class="col">
+                      <h5>Địa chỉ:</h5>
+                      <p  class="card-text">TP HCM</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Phòng ban:</h5>
+                      <p  class="card-text">2110111</p>
+                    </div>
+                    <div class="col">
+                      <h5>Lương cơ bản:</h5>
+                      <p  class="card-text">2110111</p>
+                    </div>
+                    <div class="col">
+                      <h5>Vị trí:</h5>
+                      <p  class="card-text">ABC</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Email</a>
+                <a href="#" class="card-link">Facebook</a>
+                <a href="#" class="card-link">Git</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
         
         
