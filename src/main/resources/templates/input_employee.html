@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <title>Edit Employee</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">EMP System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="text-center text-primary">Edit</h4>
+
+                    <form th:action="@{/employee/update}" method="post" th:object="${emp}">
+                        <input type="hidden" th:value="${emp.id}" name="id">
+
+                        <div class="form-group">
+                            <label>Enter Full Name</label>
+                            <input type="text" class="form-control" name="name" th:value="${emp.name}">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Gender</label>
+                            <select class="form-control" name="gender">
+                                <option value="">Select gender</option>
+                                <option th:each="gender : ${genders}" th:value="${gender.toString()}" th:text="${gender}" th:selected="${gender == emp.gender}"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Birthdate</label>
+                            <input type="date" class="form-control" name="birthday" th:value="${#dates.format(emp.birthday, 'yyyy-MM-dd')}">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Identify Card</label>
+                            <input type="text" class="form-control" name="identifyCard" th:value="${emp.identifyCard}">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Email</label>
+                            <input type="text" class="form-control" name="email" th:value="${emp.email}">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Phone No</label>
+                            <input type="number" class="form-control" name="phoneNumber" th:value="${emp.phoneNumber}">
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Address</label>
+                            <input type="text" class="form-control" name="address" th:value="${emp.address}">
+                        </div>
+                        <div class="form-group">
+                            <label>Select Department</label>
+                            <select class="form-control" name="deptId" th:value="${emp.deptId}">
+                                <option value="">Select department</option>
+                                <option th:each="dept : ${depts}" th:value="${dept.id}" th:text="${dept.name}"
+                                        th:selected="${dept.id == emp.deptId}"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Role</label>
+                            <select class="form-control" name="roleId" th:value="${emp.roleId}">
+                                <option value="">Select role</option>
+                                <option th:each="role : ${roles}" th:value="${role.id}" th:text="${role.title}"
+                                        th:selected="${role.id == emp.roleId}"></option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Enter Username</label>
+                            <input type="text" class="form-control" name="username" th:value="${acc.username}">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Enter Password</label>
+                            <input type="password" class="form-control" id="pass" name="pass" th:value="${acc.pass}">
+                        </div>
+
+                        <button class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
