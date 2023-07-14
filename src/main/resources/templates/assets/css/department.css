@@ -121,16 +121,6 @@ h3 {
     display: flex;
 }
 
-.table__employees {
-    background-color: white;
-    position: relative;
-    border-radius: 5px;
-    width: 122rem;
-}
-
-th {
-    color: #065392;
-}
 
 .employeea__icon {
     font-size: 20px;
@@ -194,3 +184,99 @@ th {
     font-weight: 700;
 }
 
+.list__employees {
+    position: fixed;
+    height: 100%;
+    width: 80%;
+    overflow: auto;
+    display: inline-block;
+    background-image: linear-gradient(0,#e9f0f4,#d0ecf8);
+    padding: 10px;
+}
+
+.employee__item {
+    display: flex;
+    height: 80px;
+    width: 98%;
+    margin: auto;
+    background-color: #f7fafc;
+    position: relative;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img__employee {
+    height: 7rem;
+    width: 7rem;
+    background-color: transparent;
+    margin: auto;
+    border-radius: 3.5rem;
+    margin-left: 2rem;
+}
+
+.img__employee img {
+    background-size: cover;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 3.5rem;
+} 
+
+.info__employee {
+    margin: auto;
+    width: 50rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.info__employee h5 {
+    color: #61798d;
+}
+
+.info__employee h4 {
+    color: #164368;
+}
+
+.info__employee-separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: #9aafcd;
+    height: 3rem;
+    top: 50%;
+    margin: 0 18rem;
+    transform: translateY(-50%);
+}
+
+.op__employee {
+    width: auto;
+    margin: auto;
+    display: flex;
+}
+
+.btn__op {
+    margin: auto;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 3rem;
+    background-color: transparent;
+}
+
+.btn__op  i{
+    size: 5rem;
+    margin: auto;
+}
+
+#btn-delete i {
+    color: rgb(208, 98, 43);
+}
+
+#btn-seemore i {
+    color: rgb(43, 178, 208);
+}
+
+#btn-edit i {
+    color: rgb(32, 152, 78);
+}

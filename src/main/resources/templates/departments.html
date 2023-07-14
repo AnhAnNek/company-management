@@ -58,9 +58,22 @@
                 </div>  
                 <a href="">Thống kê</a>                   
               </li>
-              <li class="header__navbar-item header__navbar-item--separate"> 
-                <div class="header__navbar-icon">
+              <li class="header__navbar-item header__navbar-item-notify header__navbar-item--separate"> 
+                <div class="header__navbar-icon ">
                   <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="header__notify">
+                  <header class="header__notify-header">
+                    <h4>Thông báo mới nhận</h4>
+                  </header>
+                  <ul class="notify__list">
+                    <li class="notify__iteam">
+                      <span>None</span>
+                    </li>
+                  </ul>
+                  <div class="notify__footer">
+                    <a href="" class="btn">Xem tất cả</a>
+                  </div>
                 </div>                   
               </li>
               <li style="margin-right: -30px;" class="header__navbar-item">                   
@@ -126,11 +139,11 @@
               <i class="fa-solid fa-people-group employeea__icon"></i>
               <h3>Employees</h3>
               <div class="input-group mb-3 box_find-item">
-                <button class="btn btn__icon">  
+                <button id="btn-find" class="btn btn__icon">  
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <input class="input__find" type="text"></input>     
-                <button class="btn__new-employee">
+                <button type="button" class="btn btn__new-employee">
                   <img src="https://tmi.butte.edu/wp-content/uploads/2018/09/add-person-2646097_1280.png" alt="new employee">
                   <h5>New</h5>
                 </button>
@@ -139,36 +152,92 @@
             </div>
             <div class="separare">   
             </div>
-            <table class="table border table-striped table__employees">
-              <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Gender</th>
-                    <th>Birthday</th>
-                    <th>Identify Card</th>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Address</th>
-                    <th>Department ID</th>
-                    <th>Role ID</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr th:each="employee : ${employees}">
-                    <td th:text="${employee.id}"></td>
-                    <td th:text="${employee.name}"></td>
-                    <td th:text="${employee.gender}"></td>
-                    <td th:text="${#dates.format(employee.birthday, 'dd-MM-yyyy')}"></td>
-                    <td th:text="${employee.identifyCard}"></td>
-                    <td th:text="${employee.email}"></td>
-                    <td th:text="${employee.phoneNumber}"></td>
-                    <td th:text="${employee.address}"></td>
-                    <td th:text="${employee.depId}"></td>
-                    <td th:text="${employee.roleId}"></td>
-                </tr>
-              </tbody>
-            </table>
+            <ul class="list__employees">
+              <li class="employee__item">
+                  <div class="img__employee">
+                    <img src="https://th.bing.com/th/id/OIP.OrET2zhhZckhOvKdwZx0DQHaHa?pid=ImgDet&rs=1" alt="avartar">
+                  </div>
+                  <div class="info__employee info__employee-separate">
+                    <h5>Tên:</h5>
+                    <h4>Nguyễn Trường An</h4>
+                  </div>
+                  <div class="info__employee info__employee-separate">
+                    <h5>ID:</h5>
+                    <h4>21110117</h4>
+                  </div>
+                  <div class="info__employee info__employee-separate">
+                    <h5>Vị trí:</h5>
+                    <h4>Web Designer</h4>
+                  </div>
+                  <div class="op__employee">
+                    <button id="btn-seemore" type="button" class="btn btn__op">
+                      <a href="employee.html"><i class="fa-solid fa-eye"></i></a>
+                    </button>
+                    <button id="btn-edit" type="button" class="btn btn__op">
+                      <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button id="btn-delete" type="button" class="btn btn__op">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>                   
+                  </div>
+              </li>
+              <li class="employee__item">
+                <div class="img__employee">
+                  <img src="https://p7.hiclipart.com/preview/980/886/491/computer-icons-icon-design-avatar-flat-face-icon.jpg" alt="avartar">
+                </div>
+                <div class="info__employee info__employee-separate">
+                  <h5>Tên:</h5>
+                  <h4>Trần Văn An</h4>
+                </div>
+                <div class="info__employee info__employee-separate">
+                  <h5>ID:</h5>
+                  <h4>21110119</h4>
+                </div>
+                <div class="info__employee info__employee-separate">
+                  <h5>Vị trí:</h5>
+                  <h4>Trưởng phòng</h4>
+                </div>
+                <div class="op__employee">
+                  <button id="btn-seemore" type="button" class="btn btn__op">
+                    <a href="employee.html"><i class="fa-solid fa-eye"></i></a>
+                  </button>
+                  <button id="btn-edit" type="button" class="btn btn__op">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button id="btn-delete" type="button" class="btn btn__op">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>                   
+                </div>
+              </li>
+              <li class="employee__item">
+                <div class="img__employee">
+                  <img src="https://www.beatriceconsultantsguru.com/images/icon-chat-beatrice.png" alt="avartar">
+                </div>
+                <div class="info__employee info__employee-separate">
+                  <h5>Tên:</h5>
+                  <h4>Nguyễn Hà Quỳnh Giao</h4>
+                </div>
+                <div class="info__employee info__employee-separate">
+                  <h5>ID:</h5>
+                  <h4>21110171</h4>
+                </div>
+                <div class="info__employee info__employee-separate">
+                  <h5>Vị trí:</h5>
+                  <h4>HR</h4>
+                </div>
+                <div class="op__employee">
+                  <button id="btn-seemore" type="button" class="btn btn__op">
+                    <a href="employee.html"><i class="fa-solid fa-eye"></i></a>
+                  </button>
+                  <button id="btn-edit" type="button" class="btn btn__op">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button id="btn-delete" type="button" class="btn btn__op">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>                   
+                </div>
+            </li>
+            </ul>
           </div>
           <div class="department__header">
             <i class="fa-solid fa-house-user icon__department"></i>
@@ -177,7 +246,7 @@
               <button class="btn dropdown-toggle" style="background-color: transparent; color: white;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               </button>
             </div>
-            <button class="btn__new-dept">
+            <button class="btn btn__new-dept">
               <i class="fa-solid fa-plus icon__department"></i>
             </button>
           </div>
