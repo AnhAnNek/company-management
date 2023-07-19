@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/employee.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Employee</title>
+  </head>
+  <body>
+    <div class="app">
+      <header class="employee__header">
+        <div class="grid">
+          <nav class="header__navbar">
+            <ul class="header__navbar-list">
+                <li class="header__navbar-item--strong header__navbar-item">
+                  <div class="btn__back btn">
+                    <a href="departments.html">
+                      <i class="icon__back fa-solid fa-arrow-left fa-beat-fade"></i>
+                    </a>
+                  </div>                           
+                </li>
+            </ul>
+            <ul class="header__navbar-list"> 
+              <li id="home-select-item" class="header__navbar-item">
+                <div class="header__navbar-icon">
+                  <i class="icon__header-menu fa-sharp fa-solid fa-pen"></i>
+                </div> 
+                <a href="#">Chỉnh sửa</a>                   
+              </li>      
+              <li class="header__navbar-item header__navbar-item--separate">
+                <div class="header__navbar-icon">
+
+                  <i class="icon__header-menu fa-solid fa-chart-simple"></i>
+                </div>  
+                <a href="">Thống kê</a>                   
+              </li>
+              <li class="header__navbar-item header__navbar-item-notify"> 
+                <div class="header__navbar-icon ">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="header__notify">
+                  <header class="header__notify-header">
+                    <h4>Yêu cầu mới</h4>
+                  </header>
+                  <ul class="notify__list">
+                    <li class="notify__iteam">
+                      <span>None</span>
+                    </li>
+                  </ul>
+                  <div class="notify__footer">
+                    <a href="" class="btn">Xem tất cả</a>
+                  </div>
+                </div>                   
+              </li>
+            </ul>
+          </nav>
+        </div>     
+      </header>
+      <div class="container">
+       
+        <div class="emloyee__container">
+          <div class="info_employee">
+            <div class="card card__info">
+              <img src="https://cdn4.iconfinder.com/data/icons/avatars-171/400/Avatar_10-512.png" class=" card-img-top" alt="avartar">
+              <div class="card-body">
+                <h3 class="card-title">Nguyễn Văn Name</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <h5>ID:</h5>
+                      <p  class="card-text">2110111</p>
+                    </div>
+                    <div class="col">
+                      <h5>CCCD:</h5>
+                      <p  class="card-text">08212535562</p>
+                    </div>
+                    <div class="col">
+                      <h5>SĐT:</h5>
+                      <p  class="card-text">032641524</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Giới tính:</h5>
+                      <p  class="card-text">Nam</p>
+                    </div>
+                    <div class="col">
+                      <h5>Ngày sinh:</h5>
+                      <p  class="card-text">28/12/2003</p>
+                    </div>
+                    <div class="col">
+                      <h5>Địa chỉ:</h5>
+                      <p  class="card-text">TP HCM</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col">
+                      <h5>Phòng ban:</h5>
+                      <p  class="card-text">2110111</p>
+                    </div>
+                    <div class="col">
+                      <h5>Lương cơ bản:</h5>
+                      <p  class="card-text">2110111</p>
+                    </div>
+                    <div class="col">
+                      <h5>Vị trí:</h5>
+                      <p  class="card-text">ABC</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Email</a>
+                <a href="#" class="card-link">Facebook</a>
+                <a href="#" class="card-link">Git</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        
+    </div>
+    <div id="modalUser" class="modal">
+      <div class="modal__overlay " onclick="closeModalUser()">
+      </div>
+      <div class="modal__body modal__body-user">
+        <div class="modal__inner">         
+          <div class="list__items">     
+           <div class="item">
+               <div class="item__icon">
+                 <button class="btn__img" onclick="closeModalUser()">
+                   <img src="https://m.media-amazon.com/images/M/MV5BYWJmZmE1YWItYjBjYi00ODU4LTg2MDUtOTQyNWY2NjFlOGM5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_.jpg" class="card-img-top" alt="avartar">
+                 </button>
+               </div>
+               <div class="item__title">
+                   <li class="user__name">Donald Trump</li>
+               </div>
+           </div>
+           <div class="item">
+             <div class="item__icon">
+              <i class="fa-solid fa-user"></i>
+             </div>
+             <div class="item__title">
+               <li class="item__title_txt">Tài khoản</li>
+             </div>
+           </div>
+           <div class="item">
+             <div class="item__icon">
+              <i class="fa-solid fa-paper-plane"></i>
+             </div>
+             <div class="item__title">
+               <li class="item__title_txt">Xin nghỉ</li>
+             </div>
+           </div>
+           <div class="item">
+             <div class="item__icon">
+              <i class="fa-solid fa-gear"></i>
+             </div>
+             <div class="item__title">
+               <li class="item__title_txt">Cài đặt</li>
+             </div>
+           </div>
+           <div class="item">
+             <div class="item__icon">
+              <i class="fa-solid fa-calendar-days"></i>
+             </div>
+             <div class="item__title">
+               <li class="item__title_txt">Lịch</li>
+             </div>
+           </div>
+           <div class="item">
+             <div class="item__icon">
+              <i class="fa-solid fa-right-to-bracket"></i>
+             </div>
+             <div class="item__title">
+               <li class="item__title_txt">
+                <a href="index.html">Đăng xuất</a>
+               </li>
+             </div>
+           </div>
+         </div>
+        </div>   
+      </div>
+    </div>
+    <script>
+      function goto() {
+        history.pushState({}, "", "index.html");
+        }
+    </script>
+    <script src="./assets/javascript/modal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

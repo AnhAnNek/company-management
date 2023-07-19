@@ -1,0 +1,356 @@
+
+
+.header {
+    background-image: linear-gradient(0,#023055,#086e88);
+    height: var(--header-height); 
+    right: 0;
+    left: 0;
+    top: 0; 
+    display: flex;
+    position: fixed;
+    z-index: 1;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.header__navbar-item {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white-color);
+    text-decoration: none;
+    margin: 0 20px;
+    position: relative;
+    margin-top: -15px;
+}
+
+.header__navbar-item:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.header__navbar-item--strong {
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-top: -15px;
+    margin-left: -40px;
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    background-color: #dfe9f7;
+    height: 12px;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon{
+    display: inline;
+    margin: 0 10px;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+
+img {
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 100px;
+    margin: auto;
+}
+
+.projects  , .UserTasks{
+    left: 0;
+    margin-left: 10px; 
+    display: flex;
+    position: absolute; 
+    margin-top: var(--header-height);
+    height: 1200px;
+    background-color:transparent;
+}
+
+.list__items {
+    height: 100rem;
+    background-color: white;
+}
+
+.item {
+    background-color: white;
+    height: auto;
+    width: 250px;
+    margin: 1px;
+    display: flex;
+}
+
+
+.item:hover{
+    color: rgba(0, 0, 0,0.5);
+    cursor: pointer;
+} 
+
+.btn__img {
+    border: none;
+    background-color: transparent;
+    margin: 5px;  
+    cursor: pointer;
+}
+
+.btn__img  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.item__icon {
+    margin: auto;
+    margin-left: 20px;
+}
+
+.item__title {
+    margin: auto;
+    margin-left: 5px;
+    display: inline;
+}
+
+.user__name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline;
+}
+
+.item__title_txt {
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline;
+}
+
+i {
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.modal__body-user {
+  margin-right: 0;
+  margin-top: var(--header-height);
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.header__navbar-item a {
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.icon__header-menu {
+    margin-right: -20px;
+}
+
+
+
+.list__card {
+    margin-top: 60px;
+    min-height: 300px;
+    min-width: 1500px;
+    background-color: #d0eae8;
+    border-color: transparent;
+    display: flex;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.card-item {
+    display: flex;
+    z-index: 1;
+    margin: auto;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    z-index: 0;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    height: 250px;
+    display: flex;
+  }
+
+.card img {
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+.btn-select-item {
+    background-image: linear-gradient(0,#398297,#16819b);
+    color: white;
+    font-weight: 500;
+    margin: auto;
+    width: 100px;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.btn-select-item:hover {
+    background-image: linear-gradient(0,#4ba6bf,#1c9cbc);
+    color: white;
+    transform: scale(1.1);
+}
+
+.title__list {
+    display: flex;
+}
+
+.header__list {
+    height: 50px;
+    width: 1500px;  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    background-color: transparent;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.box__item-header {
+    margin-right: 0;
+    display: flex;
+}
+
+.btn__icon {
+    border-radius: 50px;
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    display: flex;
+}
+
+.btn__icon i {
+    margin: auto;
+    height: 10px;
+    width: 10px;
+    color: #157a93;
+} 
+
+.input__find {
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border: 1px solid #157a93;
+    padding: 5px;
+    color: #086e88;
+}
+
+.card__new {
+    background-color: white;
+}
+
+
+
+.close__modal {
+    margin: 10px;
+    font-size: 20px;
+}
+
+@keyframes HeaderNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify {
+    min-height: 200px;
+    min-width: 300px;
+    max-height: 500px;
+    background-color: white;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-left: -200px;
+    margin-top: -10px;
+    user-select: none;
+    cursor: auto;
+    transform-origin: 80% top;
+    animation: HeaderNotifyGrowth ease-in 0.25s;
+    will-change: opacity, transform;
+    display: none;
+}
+
+.header__navbar-item-notify:hover .header__notify {
+    display: block;
+}
+
+.header__notify::before {
+    content: "";
+    border-width: 20px 30px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    top: -25px;
+    left: 208px;
+}
+
+.header__notify-header {
+    display: flex;
+    height: 30px;
+    border-radius: 10px;
+    user-select: none;
+    cursor: auto;
+}
+
+.header__notify-header h4 {
+    color: #616568;
+    margin: auto;
+    margin-top: 10px;  
+}
+
+
+.notify__iteam{
+    user-select: auto;
+    cursor: pointer;
+}
+
+.notify__iteam span{
+    color: #023055;
+    margin: auto;
+}
+
+.notify__footer {
+    margin-top: 12rem;
+    margin-left: 10rem;
+    margin-bottom: 0.5rem;
+}
+
+.notify__footer a {
+    color: #023055;
+    font-size: 1.2rem;
+}

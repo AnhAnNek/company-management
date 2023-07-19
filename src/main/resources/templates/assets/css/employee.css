@@ -1,0 +1,73 @@
+:root {
+    --header-employee-height: 70px;
+}
+
+.employee__header {
+    height: var(--header-employee-height);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    background-image: linear-gradient(0,#a274c8,#513093);
+    justify-content: space-between
+}
+
+
+.btn__back 
+{
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.btn__back i{
+    color: white;
+}
+
+.emloyee__container {
+    margin-top:var(--header-employee-height) ;
+    height: 100%;
+    width: 155rem;
+    margin-left: -21rem;
+    position: fixed;
+    display: flex;
+    z-index: -1;
+    background-image: url(https://phunugioi.com/wp-content/uploads/2020/02/mau-background-dep.jpg);
+    background-size: cover;
+}
+
+.info_employee {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card__info {
+    margin: auto;
+    margin-top: 30px;
+    width: 100rem;
+    height: auto;
+    padding: 10px;
+    background-image: linear-gradient(0,#f4f1f5,#f794e0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card__info img {
+    border-radius: 50%;
+    height: 15rem;
+    width:  15rem;
+}
+
+
+
+p {
+    font-size: 1.4rem;
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
