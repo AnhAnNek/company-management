@@ -269,15 +269,15 @@ h3 {
     margin: auto;
 }
 
-#btn-delete i {
+.btn_delete i {
     color: rgb(208, 98, 43);
 }
 
-#btn-seemore i {
+.btn_seemore i {
     color: rgb(43, 178, 208);
 }
 
-#btn-edit i {
+.btn_edit i {
     color: rgb(32, 152, 78);
 }
 
